@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5451620979923035}
   - component: {fileID: 3149890666905995890}
   - component: {fileID: 6420105082436069266}
-  - component: {fileID: -8243559821204330288}
+  - component: {fileID: 4659388197932755466}
   m_Layer: 0
   m_Name: Push Box
   m_TagString: Untagged
@@ -131,7 +131,7 @@ MonoBehaviour:
   _spriteRenderer: {fileID: 0}
   CloseColor: {r: 1, g: 0, b: 0, a: 1}
   _defaultColor: {r: 0, g: 0, b: 0, a: 0}
---- !u!60 &-8243559821204330288
+--- !u!60 &4659388197932755466
 PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -169,7 +169,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 0.671875}
+    oldSize: {x: 1.7066667, y: 1.1466666}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -177,15 +177,15 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.2890625, y: -0.31835938}
-      - {x: 0.48632812, y: -0.15820312}
-      - {x: 0.453125, y: 0.119140625}
-      - {x: 0.30664062, y: 0.203125}
-      - {x: 0.111328125, y: 0.2734375}
-      - {x: -0.15234375, y: 0.3125}
-      - {x: -0.43359375, y: 0.3203125}
-      - {x: -0.48828125, y: 0.265625}
-      - {x: -0.37109375, y: -0.005859375}
-      - {x: -0.24609375, y: -0.2265625}
-      - {x: -0.029296875, y: -0.296875}
+    - - {x: 0.49333334, y: -0.54333335}
+      - {x: 0.83000004, y: -0.27}
+      - {x: 0.7733334, y: 0.20333333}
+      - {x: 0.5233334, y: 0.34666666}
+      - {x: 0.19, y: 0.46666667}
+      - {x: -0.26000002, y: 0.53333336}
+      - {x: -0.74, y: 0.5466667}
+      - {x: -0.8333334, y: 0.45333335}
+      - {x: -0.6333333, y: -0.01}
+      - {x: -0.42000002, y: -0.3866667}
+      - {x: -0.05, y: -0.50666666}
   m_UseDelaunayMesh: 0
