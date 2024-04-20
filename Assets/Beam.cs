@@ -12,12 +12,14 @@ public class Beam : MonoBehaviour
     private void Awake()
     {
         lineRenderer = GetComponent<LineRenderer>();
+        lineRenderer.startWidth = lineRenderer.endWidth = 0.2f;
     }
 
     void Update()
     {
         var points = new List<Vector3>() { transform.position };
         points = GetPoints(points, transform.position, transform.up);
+        lineRenderer.positionCount = points.Count;
         lineRenderer.SetPositions(points.ToArray());
     }
 
@@ -32,7 +34,7 @@ public class Beam : MonoBehaviour
         
         if (raycast.collider.CompareTag("Mirror"))
         {
-            var angledDirection = CalculateDirection(direction, raycast.transform.up.normalized);
+            var angledDirection = CalculateDirection(direction, raycast.transform.up);
             return GetPoints(points, point, angledDirection);
         }
 
@@ -41,6 +43,6 @@ public class Beam : MonoBehaviour
 
     private Vector3 CalculateDirection(Vector3 direction, Vector3 normal)
     {
-        return direction - 2 * Vector2.Dot(direction, normal) * normal;
+        return Vector3.Reflect(direction, normal);
     }
 }
