@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6420105082436069266}
   - component: {fileID: 4659388197932755466}
   m_Layer: 0
-  m_Name: Push Box
+  m_Name: Boulder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

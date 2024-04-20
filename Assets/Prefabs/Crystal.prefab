@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 301679970907622674}
   - component: {fileID: 7901750835650221333}
   - component: {fileID: 130480792638740511}
+  - component: {fileID: 5336984170307661442}
   m_Layer: 0
   m_Name: Crystal
   m_TagString: Glass
@@ -133,3 +134,17 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.6312044, y: 0.9796305}
   m_EdgeRadius: 0
+--- !u!114 &5336984170307661442
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3639551535535898637}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ea989b1b2ab4441a8094f4ca3d3798f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  blue: {fileID: 5161444392629430826, guid: c7eb4cc1b4c66a947b5e9cc29b87495a, type: 3}
+  orange: {fileID: -4051092001268533250, guid: 242b0ab2dc049484dae2732a188a0d33, type: 3}
