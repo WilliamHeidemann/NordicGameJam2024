@@ -25,12 +25,12 @@
                 },
                 {
                     "name": "Pull",
-                    "type": "Value",
+                    "type": "Button",
                     "id": "c14bf5b8-bbd4-4409-84c9-358f98f597eb",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": true
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
