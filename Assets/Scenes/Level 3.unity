@@ -9918,7 +9918,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4713755481289611717, guid: 34ce624ab8a8e6946a88c6edd28956a8, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.38268343
+      value: 0.92387956
       objectReference: {fileID: 0}
     - target: {fileID: 4713755481289611717, guid: 34ce624ab8a8e6946a88c6edd28956a8, type: 3}
       propertyPath: m_LocalRotation.x
@@ -9930,7 +9930,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4713755481289611717, guid: 34ce624ab8a8e6946a88c6edd28956a8, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.92387956
+      value: -0.38268343
       objectReference: {fileID: 0}
     - target: {fileID: 4713755481289611717, guid: 34ce624ab8a8e6946a88c6edd28956a8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -9942,11 +9942,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4713755481289611717, guid: 34ce624ab8a8e6946a88c6edd28956a8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 135
+      value: -45
       objectReference: {fileID: 0}
     - target: {fileID: 7132688171129520129, guid: 34ce624ab8a8e6946a88c6edd28956a8, type: 3}
       propertyPath: m_Name
-      value: Push Box (1)
+      value: MirrorBoulder
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
