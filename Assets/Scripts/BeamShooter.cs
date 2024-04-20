@@ -75,6 +75,11 @@ public class Beam
             bonfire.LightUp();
         }
 
+        if (wentThroughGlass && raycast.transform.TryGetComponent<CaveMan>(out var caveMan))
+        {
+            caveMan.Die();
+        }
+
         list.Add(raycast.point + (direction * 0.5f));
     }
 }

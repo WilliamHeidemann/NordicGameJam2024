@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 8083769920250751621}
   - component: {fileID: 7058224804568581402}
   - component: {fileID: 3911041463969278573}
+  - component: {fileID: -3053807655651062275}
   m_Layer: 0
   m_Name: Caveman
   m_TagString: Untagged
@@ -131,6 +132,18 @@ MonoBehaviour:
   movables: []
   MinimumPullingDistance: 1.5
   PullingSpeed: 0.2
+--- !u!114 &-3053807655651062275
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 73557994509418653}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3212bceea4794315bd95e5f8bea6a99e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!61 &3911041463969278573
 BoxCollider2D:
   m_ObjectHideFlags: 0
