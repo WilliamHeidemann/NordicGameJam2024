@@ -58,12 +58,6 @@ public class Beam
 
         if (raycast.collider is null) return;
 
-        if (raycast.collider.CompareTag("Crack"))
-        {
-            CalculatePoints(point + (direction * CRACK_WIDTH), point, direction, wentThroughGlass);
-            return;
-        }
-
         if (raycast.collider.CompareTag("Mirror"))
         {
             var angledDirection = Vector2.Reflect(direction, raycast.transform.up);
