@@ -15,15 +15,6 @@
                     "initialStateCheck": true
                 },
                 {
-                    "name": "Rotate",
-                    "type": "Value",
-                    "id": "2dfc6ea1-ecca-40b3-993a-83aa67beb3ea",
-                    "expectedControlType": "Axis",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": true
-                },
-                {
                     "name": "Mirror",
                     "type": "Button",
                     "id": "74f8962f-d4b6-4d79-b868-2cb5c0c2d44c",
@@ -33,9 +24,9 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Boost",
+                    "name": "Pull",
                     "type": "Value",
-                    "id": "3b57b8bc-40bd-47cb-9736-711b20cc289e",
+                    "id": "c14bf5b8-bbd4-4409-84c9-358f98f597eb",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -99,39 +90,6 @@
                     "isPartOfComposite": true
                 },
                 {
-                    "name": "AD",
-                    "id": "d1e0d0ae-4337-472c-8dd1-9552a1fbad1d",
-                    "path": "1DAxis",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Rotate",
-                    "isComposite": true,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "negative",
-                    "id": "0ddf91c8-086c-47a4-a78f-21e1d01c0b85",
-                    "path": "<Keyboard>/a",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Keyboard",
-                    "action": "Rotate",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "positive",
-                    "id": "4ba392de-5763-46bc-bcfc-dcb26d20a7ec",
-                    "path": "<Keyboard>/d",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Keyboard",
-                    "action": "Rotate",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
                     "name": "",
                     "id": "c500bd4f-342c-4d04-9e71-06ed6e3952ef",
                     "path": "<Keyboard>/space",
@@ -144,12 +102,102 @@
                 },
                 {
                     "name": "",
-                    "id": "c1bc9d7f-fefc-4e02-b235-a8a2f0c16dae",
+                    "id": "3bfff4a0-31f9-4039-bc9b-4fb9d96921a3",
+                    "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard",
+                    "action": "Pull",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "Mirror Mode",
+            "id": "6832aa2e-6ce9-4c60-b968-9c568893da8d",
+            "actions": [
+                {
+                    "name": "Boost",
+                    "type": "Value",
+                    "id": "a9ffb10a-237b-49a6-a504-ff0c1b4c7f98",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "Rotate",
+                    "type": "Value",
+                    "id": "5f675f28-ac64-4acc-ac68-a2837f2b0e5d",
+                    "expectedControlType": "Axis",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "Mirror",
+                    "type": "Button",
+                    "id": "96c846f8-1ff2-4df5-8e65-df4e10d730c9",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "AD",
+                    "id": "6f7f20ed-df80-4e40-ab4b-25d07656afb8",
+                    "path": "1DAxis",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Rotate",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "negative",
+                    "id": "36567ded-a7fb-48f2-aa66-09b9b6b8542f",
+                    "path": "<Keyboard>/a",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard",
+                    "action": "Rotate",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "positive",
+                    "id": "c965875e-f012-447d-b94c-9078a0a9706f",
+                    "path": "<Keyboard>/d",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard",
+                    "action": "Rotate",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "85bb271a-e102-4dd3-8430-e39b7a1b8222",
                     "path": "<Keyboard>/shift",
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard",
                     "action": "Boost",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "e4736842-27f2-48fd-aa5e-d159947429f4",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard",
+                    "action": "Mirror",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
