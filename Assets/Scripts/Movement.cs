@@ -7,12 +7,15 @@ using UnityEngine.InputSystem;
 [RequireComponent(typeof(Rigidbody2D), typeof(MoveBox), typeof(PlayerInput))]
 public class Movement : MonoBehaviour
 {
+    public Sprite MirrorSprite;
+    public Sprite NormalSprite;
     private PlayerInput _playerInput;
     private Vector2 _moveInput;
     private float _rotateInput;
     private bool _boosting;
     private bool _holdingMirror;
     private Rigidbody2D _rigidbody2D;
+    public SpriteRenderer MySpriteRenderer;
     private Quaternion _lastRotationWithMirror;
 
     private MoveBox _moveBox;
@@ -34,9 +37,13 @@ public class Movement : MonoBehaviour
     {
         _holdingMirror = !_holdingMirror;
         Mirror.SetActive(_holdingMirror);
+        MySpriteRenderer.flipY = _holdingMirror;
+
         if (_holdingMirror)
         {
             // pulled up mirror
+            MySpriteRenderer.sprite = MirrorSprite;
+
             _playerInput.SwitchCurrentActionMap("Mirror Mode");
             _rotateInput = 0;
             transform.rotation = _lastRotationWithMirror;
@@ -45,6 +52,7 @@ public class Movement : MonoBehaviour
         else
         {
             // took away mirror
+            MySpriteRenderer.sprite = NormalSprite;
             _playerInput.SwitchCurrentActionMap("Movement");
             _lastRotationWithMirror = transform.rotation;
             transform.rotation = Quaternion.identity;
