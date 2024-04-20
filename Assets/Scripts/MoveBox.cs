@@ -29,7 +29,6 @@ public class MoveBox : MonoBehaviour
             if (distance > MaxDistance) return;
             if (distance < 0.5f) return;
             closest.transform.position = Vector2.MoveTowards(closest.transform.position, transform.position, 0.2f);
-            print("Moving");
         }
     }
     
