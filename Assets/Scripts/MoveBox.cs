@@ -20,7 +20,6 @@ public class MoveBox : MonoBehaviour
 
     private void FixedUpdate()
     {
-        print(movables.Count);
         if (Input.GetKey(KeyCode.P) && LastMovedDirection != Vector2.zero)
         {
             if (!movables.Any()) return;
