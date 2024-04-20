@@ -9,6 +9,7 @@ public class BeamShooter : MonoBehaviour
 
     [SerializeField] private LineRenderer lineBeforeGlass;
     [SerializeField] private LineRenderer lineAfterGlass;
+    public float BeamWidth = 0.3f;
     private Beam beam = new();
     [SerializeField] private Color colorBeforeGlassStart;
     [SerializeField] private Color colorBeforeGlassEnd;
@@ -37,8 +38,6 @@ public class BeamShooter : MonoBehaviour
 
 public class Beam
 {
-    private const float CRACK_WIDTH = 1.5f;
-
     public readonly List<Vector3> HitsBeforeGlass = new();
     public readonly List<Vector3> HitsAfterGlass = new();
     public HashSet<IBeamReactor> OldReactors = new();
@@ -87,7 +86,7 @@ public class Beam
         
         if (raycast.collider.CompareTag("Glass") && !wentThroughGlass)
         {
-            CalculatePoints(point + direction, point, direction, true);
+            CalculatePoints(point + direction * 1.5f, point, direction, true);
         }
 
         if (wentThroughGlass && raycast.transform.TryGetComponent<Bonfire>(out var bonfire))
@@ -100,6 +99,6 @@ public class Beam
             caveMan.Die();
         }
 
-        list.Add(raycast.point + (direction * 0.5f));
+        list.Add(raycast.point + (direction * 0.25f));
     }
 }
