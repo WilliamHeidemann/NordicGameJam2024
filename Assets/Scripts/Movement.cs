@@ -32,7 +32,7 @@ public class Movement : MonoBehaviour
         if (_holdingMirror)
         {
             _rigidbody2D.velocity = Vector2.zero;
-            _moveInput = Vector2.zero;
+            //_moveInput = Vector2.zero;
         }
         else
         {
