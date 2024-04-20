@@ -4,15 +4,14 @@ using UnityEngine;
 
 public class Pushing : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public float PushingForce = 5f;
+    public Vector2 LastMovedDirection;
 
-    // Update is called once per frame
-    void Update()
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        
+        if (collision.gameObject.CompareTag("Pushable"))
+        {
+            collision.gameObject.GetComponent<Rigidbody2D>().AddForce(PushingForce * LastMovedDirection);
+        }
     }
 }

@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-[RequireComponent(typeof(Rigidbody2D))]
+[RequireComponent(typeof(Rigidbody2D), typeof(Pushing))]
 public class Movement : MonoBehaviour
 {
     private Vector2 _moveInput;
@@ -12,7 +12,9 @@ public class Movement : MonoBehaviour
     private bool _boosting;
     private bool _holdingMirror;
     private Rigidbody2D _rigidbody2D;
+    private Quaternion _lastRotationWithMirror;
 
+    private Pushing _pushing;
 
     public float MoveSpeed = 10f;
     public float RotationSpeed = 100f;
@@ -23,6 +25,7 @@ public class Movement : MonoBehaviour
     void Start()
     {
         _rigidbody2D = GetComponent<Rigidbody2D>();
+        _pushing = GetComponent<Pushing>();
     }
 
     void ToggleMirror()
@@ -31,11 +34,15 @@ public class Movement : MonoBehaviour
         Mirror.SetActive(_holdingMirror);
         if (_holdingMirror)
         {
+            // pulled up mirror
+            transform.rotation = _lastRotationWithMirror;
             _rigidbody2D.velocity = Vector2.zero;
         }
         else
         {
-            _rotateInput = 0;
+            // took away mirror
+            _lastRotationWithMirror = transform.rotation;
+            transform.rotation = Quaternion.identity;
         }
     }
 
@@ -74,12 +81,18 @@ public class Movement : MonoBehaviour
 
     void Move()
     {
+        if (_moveInput.magnitude == 0)
+            return;
+
         _rigidbody2D.velocity = _moveInput * MoveSpeed;
+        _pushing.LastMovedDirection = _moveInput;
+        _pushing.LastMovedDirection.Normalize();
     }
 
     void Rotate()
     {
         var rotationSpeed = _boosting ? BoostRotationSpeed : RotationSpeed;
-        transform.Rotate(0, 0, -_rotateInput * rotationSpeed * Time.deltaTime);
+        var rotationAmount = -_rotateInput * rotationSpeed * Time.deltaTime;
+        transform.Rotate(0, 0, rotationAmount);
     }
 }
