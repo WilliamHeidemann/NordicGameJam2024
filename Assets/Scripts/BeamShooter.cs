@@ -46,7 +46,7 @@ public class Beam
         HitsAfterGlass.Clear();
     }
     
-    public void CalculatePoints(Vector3 start, Vector3 direction, bool wentThroughGlass)
+    public void CalculatePoints(Vector2 start, Vector2 direction, bool wentThroughGlass)
     {
         var list = wentThroughGlass ? HitsAfterGlass : HitsBeforeGlass;
         list.Add(start);
@@ -58,14 +58,14 @@ public class Beam
         if (raycast.collider is null) return;
         if (raycast.collider.CompareTag("Mirror"))
         {
-            var angledDirection = Vector3.Reflect(direction, raycast.transform.up);
-            CalculatePoints(point, angledDirection, wentThroughGlass);
+            var angledDirection = Vector2.Reflect(direction, raycast.transform.up);
+            CalculatePoints(point + angledDirection, angledDirection, wentThroughGlass);
             return;
         }
         
         if (raycast.collider.CompareTag("Glass") && !wentThroughGlass)
         {
-            CalculatePoints((Vector3)point + direction, direction, true);
+            CalculatePoints(point + direction, direction, true);
         }
         
         list.Add(raycast.point);
