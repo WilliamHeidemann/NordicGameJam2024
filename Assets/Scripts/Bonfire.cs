@@ -15,6 +15,5 @@ public class Bonfire : MonoBehaviour
     public void LightUp()
     {
         spriteRenderer.color = Color.red;
-        print("Lit up");
     }
 }

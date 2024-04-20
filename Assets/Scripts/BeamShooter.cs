@@ -70,7 +70,7 @@ public class Beam
         
         list.Add(raycast.point);
 
-        if (raycast.transform.TryGetComponent<Bonfire>(out var bonfire))
+        if (wentThroughGlass && raycast.transform.TryGetComponent<Bonfire>(out var bonfire))
         {
             bonfire.LightUp();
         }
