@@ -54,7 +54,7 @@ MonoBehaviour:
   MirrorSprite: {fileID: -2649097286958473352, guid: 98822a5eba8ad1545846d62329f14148, type: 3}
   NormalSprite: {fileID: 6558584500179582460, guid: b0c5588fb2a9cc142aa404a5658808c8, type: 3}
   MySpriteRenderer: {fileID: 8538546846941210649}
-  MoveSpeed: 10
+  MoveSpeed: 6
   RotationSpeed: 30
   BoostRotationSpeed: 200
   Mirror: {fileID: 904168851609198999}
