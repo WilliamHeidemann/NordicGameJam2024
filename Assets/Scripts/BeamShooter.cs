@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class BeamShooter : MonoBehaviour
@@ -40,11 +41,25 @@ public class Beam
 
     public readonly List<Vector3> HitsBeforeGlass = new();
     public readonly List<Vector3> HitsAfterGlass = new();
+    public HashSet<IBeamReactor> OldReactors = new();
+    public HashSet<IBeamReactor> Reactors = new();
 
     public void ResetPoints()
     {
         HitsBeforeGlass.Clear();
         HitsAfterGlass.Clear();
+        foreach (var reactor in Reactors.Where(reactor => !OldReactors.Contains(reactor)))
+        {
+            reactor.React();
+        }
+        foreach (var reactor in OldReactors.Where(reactor => !Reactors.Contains(reactor)))
+        {
+            reactor.End();
+        }
+
+        
+        OldReactors = Reactors;
+        Reactors = new HashSet<IBeamReactor>();
     }
 
     public void CalculatePoints(Vector2 rayStart, Vector2 lineStart, Vector2 direction, bool wentThroughGlass)
@@ -65,6 +80,11 @@ public class Beam
             return;
         }
 
+        if (raycast.collider.TryGetComponent<IBeamReactor>(out var reactor))
+        {
+            Reactors.Add(reactor);
+        }
+        
         if (raycast.collider.CompareTag("Glass") && !wentThroughGlass)
         {
             CalculatePoints(point + direction, point, direction, true);
