@@ -19,7 +19,7 @@ public class MoveBox : MonoBehaviour
         if (Input.GetKey(KeyCode.P) && LastMovedDirection != Vector2.zero) // && wasd bliver brugt
         {
             if (!moveables.Any()) return;
-            var (distance, movable) = moveables.OrderBy(pair => pair.Item1).First();
+            var (distance, movable) = moveables.ToList().OrderBy(pair => pair.Item1).First();
             if (distance < 0.5f) return;
             movable.transform.position = Vector2.MoveTowards(movable.transform.position, transform.position, 0.2f);
         }
