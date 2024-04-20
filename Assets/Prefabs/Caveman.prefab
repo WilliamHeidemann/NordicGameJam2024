@@ -132,18 +132,6 @@ MonoBehaviour:
   movables: []
   MinimumPullingDistance: 1.5
   PullingSpeed: 0.2
---- !u!114 &-3053807655651062275
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 73557994509418653}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3212bceea4794315bd95e5f8bea6a99e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &3911041463969278573
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -190,6 +178,18 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.51792526, y: 0.50246435}
   m_EdgeRadius: 0
+--- !u!114 &-3053807655651062275
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 73557994509418653}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3212bceea4794315bd95e5f8bea6a99e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6990120658537402367
 GameObject:
   m_ObjectHideFlags: 0
@@ -265,10 +265,10 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 15
-  m_Sprite: {fileID: -2649097286958473352, guid: 98822a5eba8ad1545846d62329f14148, type: 3}
+  m_Sprite: {fileID: 6558584500179582460, guid: b0c5588fb2a9cc142aa404a5658808c8, type: 3}
   m_Color: {r: 0.990566, g: 0.990566, b: 0.990566, a: 1}
   m_FlipX: 0
-  m_FlipY: 1
+  m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 0.8359375, y: 1}
   m_AdaptiveModeThreshold: 0.5
