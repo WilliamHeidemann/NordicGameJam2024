@@ -1,7 +1,6 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
 
 public class BeamShooter : MonoBehaviour
@@ -27,7 +26,7 @@ public class BeamShooter : MonoBehaviour
     private void FixedUpdate()
     {
         beam.ResetPoints();
-        beam.CalculatePoints(transform.position, transform.up, false);
+        beam.CalculatePoints(transform.position, transform.position, transform.up, false);
         lineBeforeGlass.positionCount = beam.HitsBeforeGlass.Count;
         lineBeforeGlass.SetPositions(beam.HitsBeforeGlass.ToArray());
         lineAfterGlass.positionCount = beam.HitsAfterGlass.Count;
@@ -45,34 +44,34 @@ public class Beam
         HitsBeforeGlass.Clear();
         HitsAfterGlass.Clear();
     }
-    
-    public void CalculatePoints(Vector2 start, Vector2 direction, bool wentThroughGlass)
+
+    public void CalculatePoints(Vector2 rayStart, Vector2 lineStart, Vector2 direction, bool wentThroughGlass)
     {
         var list = wentThroughGlass ? HitsAfterGlass : HitsBeforeGlass;
-        list.Add(start);
+        list.Add(lineStart);
         if (list.Count >= 5) return;
-        
-        var raycast = Physics2D.Raycast(start, direction);
+
+        var raycast = Physics2D.Raycast(rayStart, direction);
         var point = raycast.point;
 
         if (raycast.collider is null) return;
         if (raycast.collider.CompareTag("Mirror"))
         {
             var angledDirection = Vector2.Reflect(direction, raycast.transform.up);
-            CalculatePoints(point + angledDirection, angledDirection, wentThroughGlass);
+            CalculatePoints(point + angledDirection, point, angledDirection, wentThroughGlass);
             return;
         }
-        
+
         if (raycast.collider.CompareTag("Glass") && !wentThroughGlass)
         {
-            CalculatePoints(point + direction, direction, true);
+            CalculatePoints(point + direction, point, direction, true);
         }
-        
-        list.Add(raycast.point);
 
         if (wentThroughGlass && raycast.transform.TryGetComponent<Bonfire>(out var bonfire))
         {
             bonfire.LightUp();
         }
+
+        list.Add(raycast.point + (direction * 0.5f));
     }
 }

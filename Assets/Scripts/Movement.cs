@@ -32,14 +32,11 @@ public class Movement : MonoBehaviour
         if (_holdingMirror)
         {
             _rigidbody2D.velocity = Vector2.zero;
-            //_moveInput = Vector2.zero;
         }
         else
         {
             _rotateInput = 0;
         }
-
-
     }
 
     void OnMove(InputValue value)
@@ -49,7 +46,8 @@ public class Movement : MonoBehaviour
 
     void OnRotate(InputValue value)
     {
-        _rotateInput = value.Get<float>();
+        if (_holdingMirror)
+            _rotateInput = value.Get<float>();
     }
 
     void OnBoost(InputValue value)
@@ -81,7 +79,6 @@ public class Movement : MonoBehaviour
 
     void Rotate()
     {
-        Debug.Log($"{_boosting}");
         var rotationSpeed = _boosting ? BoostRotationSpeed : RotationSpeed;
         transform.Rotate(0, 0, -_rotateInput * rotationSpeed * Time.deltaTime);
     }

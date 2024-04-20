@@ -983,11 +983,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8342973318652926053, guid: 8ac61e5cb0ad9a344a4579878a6e2f41, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.57
+      value: -13.35
       objectReference: {fileID: 0}
     - target: {fileID: 8342973318652926053, guid: 8ac61e5cb0ad9a344a4579878a6e2f41, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.86
+      value: -1.08
       objectReference: {fileID: 0}
     - target: {fileID: 8342973318652926053, guid: 8ac61e5cb0ad9a344a4579878a6e2f41, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1091,6 +1091,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 84027243223835744, guid: e91ace1138e3b6e448e76db44091623c, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1751668814181323235, guid: e91ace1138e3b6e448e76db44091623c, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 3999142726742549787, guid: e91ace1138e3b6e448e76db44091623c, type: 3}
       propertyPath: m_Name
       value: Beam Shooter
