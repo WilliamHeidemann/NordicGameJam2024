@@ -4,9 +4,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-[RequireComponent(typeof(Rigidbody2D), typeof(MoveBox))]
+[RequireComponent(typeof(Rigidbody2D), typeof(MoveBox), typeof(PlayerInput))]
 public class Movement : MonoBehaviour
 {
+    private PlayerInput _playerInput;
     private Vector2 _moveInput;
     private float _rotateInput;
     private bool _boosting;
@@ -26,6 +27,7 @@ public class Movement : MonoBehaviour
     {
         _rigidbody2D = GetComponent<Rigidbody2D>();
         _moveBox = GetComponent<MoveBox>();
+        _playerInput = GetComponent<PlayerInput>();
     }
 
     void ToggleMirror()
@@ -35,6 +37,7 @@ public class Movement : MonoBehaviour
         if (_holdingMirror)
         {
             // pulled up mirror
+            _playerInput.SwitchCurrentActionMap("Mirror Mode");
             _rotateInput = 0;
             transform.rotation = _lastRotationWithMirror;
             _rigidbody2D.velocity = Vector2.zero;
@@ -42,6 +45,7 @@ public class Movement : MonoBehaviour
         else
         {
             // took away mirror
+            _playerInput.SwitchCurrentActionMap("Movement");
             _lastRotationWithMirror = transform.rotation;
             transform.rotation = Quaternion.identity;
         }
