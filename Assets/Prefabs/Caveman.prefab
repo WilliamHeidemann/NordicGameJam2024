@@ -216,6 +216,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PushingForce: 0.25
   LastMovedDirection: {x: 0, y: 0}
+  movables: []
+  MinimumPullingDistance: 1.5
+  PullingSpeed: 0.2
 --- !u!1 &6990120658537402367
 GameObject:
   m_ObjectHideFlags: 0

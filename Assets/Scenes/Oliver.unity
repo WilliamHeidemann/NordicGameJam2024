@@ -3750,6 +3750,10 @@ PrefabInstance:
       propertyPath: MaxDistance
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 7058224804568581402, guid: 8ac61e5cb0ad9a344a4579878a6e2f41, type: 3}
+      propertyPath: MinimumPullingDistance
+      value: 1.5
+      objectReference: {fileID: 0}
     - target: {fileID: 8342973318652926053, guid: 8ac61e5cb0ad9a344a4579878a6e2f41, type: 3}
       propertyPath: m_LocalPosition.x
       value: -8.503
