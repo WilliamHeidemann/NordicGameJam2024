@@ -36,6 +36,8 @@ public class BeamShooter : MonoBehaviour
 
 public class Beam
 {
+    private const float CRACK_WIDTH = 1.5f;
+
     public readonly List<Vector3> HitsBeforeGlass = new();
     public readonly List<Vector3> HitsAfterGlass = new();
 
@@ -55,6 +57,13 @@ public class Beam
         var point = raycast.point;
 
         if (raycast.collider is null) return;
+
+        if (raycast.collider.CompareTag("Crack"))
+        {
+            CalculatePoints(point + (direction * CRACK_WIDTH), point, direction, wentThroughGlass);
+            return;
+        }
+
         if (raycast.collider.CompareTag("Mirror"))
         {
             var angledDirection = Vector2.Reflect(direction, raycast.transform.up);
