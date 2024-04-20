@@ -24,7 +24,7 @@ public class BeamShooter : MonoBehaviour
         lineAfterGlass.endColor = colorAfterGlassEnd;
     }
 
-    void Update()
+    private void FixedUpdate()
     {
         beam.ResetPoints();
         beam.CalculatePoints(transform.position, transform.up, false);
