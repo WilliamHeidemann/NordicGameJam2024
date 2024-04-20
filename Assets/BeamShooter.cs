@@ -55,6 +55,7 @@ public class Beam
         var raycast = Physics2D.Raycast(start, direction);
         var point = raycast.point;
 
+        if (raycast.collider is null) return;
         if (raycast.collider.CompareTag("Mirror"))
         {
             var angledDirection = Vector3.Reflect(direction, raycast.transform.up);
@@ -68,5 +69,10 @@ public class Beam
         }
         
         list.Add(raycast.point);
+
+        if (raycast.transform.TryGetComponent<Bonfire>(out var bonfire))
+        {
+            bonfire.LightUp();
+        }
     }
 }
