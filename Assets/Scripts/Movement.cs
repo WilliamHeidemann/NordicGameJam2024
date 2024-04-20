@@ -30,6 +30,7 @@ public class Movement : MonoBehaviour
         _holdingMirror = !_holdingMirror;
         Mirror.SetActive(_holdingMirror);
         _rigidbody2D.velocity = Vector2.zero;
+        _moveInput = Vector2.zero;
     }
 
     void OnMove(InputValue value)
