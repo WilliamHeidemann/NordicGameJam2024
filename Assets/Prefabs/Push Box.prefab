@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5451620979923035}
   - component: {fileID: 4855061408381846096}
   - component: {fileID: 3149890666905995890}
+  - component: {fileID: 6420105082436069266}
   m_Layer: 0
   m_Name: Push Box
   m_TagString: Pushable
@@ -161,3 +162,16 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &6420105082436069266
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8613554242224311162}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc568544c963789439aca3bc819eebeb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CloseColor: {r: 1, g: 0, b: 0, a: 1}
