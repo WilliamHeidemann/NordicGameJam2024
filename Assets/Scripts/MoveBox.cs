@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UIElements;
@@ -9,17 +10,19 @@ public class MoveBox : MonoBehaviour
 {
     public float PushingForce = .25f;
     public Vector2 LastMovedDirection;
-    public float MaxDistance = 5;
+    public float MaxDistance = 1f;
 
-    public HashSet<(float, Moveable)> moveables;
+    public HashSet<(float, Moveable)> moveables = new();
 
-    private void Awake()
+    private void FixedUpdate()
     {
-        moveables = new();
-    }
-
-    private void Update()
-    {
+        if (Input.GetKey(KeyCode.P) && LastMovedDirection != Vector2.zero) // && wasd bliver brugt
+        {
+            if (!moveables.Any()) return;
+            var (distance, movable) = moveables.OrderBy(pair => pair.Item1).First();
+            if (distance < 0.5f) return;
+            movable.transform.position = Vector2.MoveTowards(movable.transform.position, transform.position, 0.2f);
+        }
     }
 
     public void AddToMoveables(float distance, Moveable moveable)

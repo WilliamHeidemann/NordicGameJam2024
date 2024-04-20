@@ -83,8 +83,7 @@ public class Movement : MonoBehaviour
     void Move()
     {
         _rigidbody2D.velocity = _moveInput * MoveSpeed;
-        _moveBox.LastMovedDirection = _moveInput;
-        _moveBox.LastMovedDirection.Normalize();
+        _moveBox.LastMovedDirection = _moveInput.normalized;
     }
 
     void Rotate()
