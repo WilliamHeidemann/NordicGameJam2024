@@ -424,7 +424,7 @@ TilemapRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 3
   m_ChunkSize: {x: 32, y: 32, z: 32}
-  m_ChunkCullingBounds: {x: 0.0029469728, y: 0.0029469728, z: 0}
+  m_ChunkCullingBounds: {x: 0.012000024, y: 0.012000024, z: 0}
   m_MaxChunkCount: 16
   m_MaxFrameAge: 16
   m_SortOrder: 0
@@ -686,6 +686,10 @@ PrefabInstance:
     - target: {fileID: 73557994509418653, guid: 73a584c8eefddd1418b5f02948d5c08d, type: 3}
       propertyPath: m_Name
       value: Caveman
+      objectReference: {fileID: 0}
+    - target: {fileID: 1008455314193925390, guid: 73a584c8eefddd1418b5f02948d5c08d, type: 3}
+      propertyPath: m_Volume
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 8342973318652926053, guid: 73a584c8eefddd1418b5f02948d5c08d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1222,7 +1226,7 @@ TilemapRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 2
   m_ChunkSize: {x: 32, y: 32, z: 32}
-  m_ChunkCullingBounds: {x: 0.0029469728, y: 0.0029469728, z: 0}
+  m_ChunkCullingBounds: {x: 0.012000024, y: 0.012000024, z: 0}
   m_MaxChunkCount: 16
   m_MaxFrameAge: 16
   m_SortOrder: 0
@@ -4540,7 +4544,7 @@ TilemapRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
-  m_ChunkCullingBounds: {x: 0.0029469728, y: 0.0029469728, z: 0}
+  m_ChunkCullingBounds: {x: 0.012000024, y: 0.012000024, z: 0}
   m_MaxChunkCount: 16
   m_MaxFrameAge: 16
   m_SortOrder: 0
