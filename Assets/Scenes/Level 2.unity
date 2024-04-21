@@ -1938,26 +1938,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Caveman
       objectReference: {fileID: 0}
-    - target: {fileID: 904168851609198999, guid: 73a584c8eefddd1418b5f02948d5c08d, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 904168851609198999, guid: 73a584c8eefddd1418b5f02948d5c08d, type: 3}
-      propertyPath: m_TagString
-      value: Player Mirror
-      objectReference: {fileID: 0}
-    - target: {fileID: 8342973318652926053, guid: 73a584c8eefddd1418b5f02948d5c08d, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8342973318652926053, guid: 73a584c8eefddd1418b5f02948d5c08d, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8342973318652926053, guid: 73a584c8eefddd1418b5f02948d5c08d, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1.2
-      objectReference: {fileID: 0}
     - target: {fileID: 8342973318652926053, guid: 73a584c8eefddd1418b5f02948d5c08d, type: 3}
       propertyPath: m_LocalPosition.x
       value: -5.7
