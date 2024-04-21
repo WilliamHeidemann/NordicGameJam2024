@@ -9,6 +9,7 @@ public class Bonfire : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     private static int currentLevel = 0;
     private bool hasBeenLit = false;
+    [SerializeField] private GameObject fire;
     
     private void Awake()
     {
@@ -19,9 +20,8 @@ public class Bonfire : MonoBehaviour
     {
         if (hasBeenLit) return;
         hasBeenLit = true;
-        spriteRenderer.color = Color.red;
-        // Play happy animation
-        await Awaitable.WaitForSecondsAsync(3f);
+        fire.SetActive(true);
+        await Awaitable.WaitForSecondsAsync(1.5f);
         SceneManager.LoadScene(++currentLevel);
     }
 }
