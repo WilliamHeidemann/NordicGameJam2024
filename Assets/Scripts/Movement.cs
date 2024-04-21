@@ -26,11 +26,14 @@ public class Movement : MonoBehaviour
 
     public GameObject Mirror;
 
+    [SerializeField] private AudioSource walkingAudio;
+
     void Start()
     {
         _rigidbody2D = GetComponent<Rigidbody2D>();
         _moveBox = GetComponent<MoveBox>();
         _playerInput = GetComponent<PlayerInput>();
+        walkingAudio.volume = 0;
     }
 
     void ToggleMirror()
@@ -94,6 +97,7 @@ public class Movement : MonoBehaviour
 
     void Move()
     {
+        walkingAudio.volume = _moveInput != Vector2.zero ? 1 : 0;
         _rigidbody2D.velocity = _moveInput * MoveSpeed;
         _moveBox.LastMovedDirection = _moveInput.normalized;
     }

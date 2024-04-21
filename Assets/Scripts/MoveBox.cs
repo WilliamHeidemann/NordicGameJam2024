@@ -10,11 +10,11 @@ public class MoveBox : MonoBehaviour
 {
     public float PushingForce = .25f;
     public Vector2 LastMovedDirection;
-    private float MaxDistance = 1.5f;
+    private float MaxDistance = 1.2f;
     public List<Movable> movables;
     private bool _pulling;
     private Movable _pullTarget;
-    public float MinimumPullingDistance = 1.5f;
+    private float MinimumPullingDistance = .9f;
     public float PullingSpeed = 0.2f;
 
     private void Start()
@@ -32,12 +32,14 @@ public class MoveBox : MonoBehaviour
             {
                 _pulling = true;
                 _pullTarget.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
+                _pullTarget.GetComponent<Outline>().enabled = true;
                 Prompt.Instance.HideE();
             }
         }
         else
         {
             _pullTarget.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
+            _pullTarget.GetComponent<Outline>().enabled = false;
             _pullTarget = null;
             _pulling = false;
         }
@@ -56,7 +58,10 @@ public class MoveBox : MonoBehaviour
         {
             var closest = GetClosestMovable();
             if (closest == null) Prompt.Instance.HideE();
-            else Prompt.Instance.ShowE(closest.transform.position + Vector3.up);
+            else
+            {
+                Prompt.Instance.ShowE(closest.transform.position + Vector3.up);
+            }
         }
     }
 
