@@ -15,8 +15,8 @@ GameObject:
   - component: {fileID: 7058224804568581402}
   - component: {fileID: 3911041463969278573}
   - component: {fileID: -3053807655651062275}
-  - component: {fileID: 2752812388146167135}
   - component: {fileID: 6946387572317293211}
+  - component: {fileID: 2752812388146167135}
   m_Layer: 0
   m_Name: Caveman
   m_TagString: Untagged
@@ -61,7 +61,6 @@ MonoBehaviour:
   BoostRotationSpeed: 200
   Mirror: {fileID: 904168851609198999}
   walkingAudio: {fileID: 2752812388146167135}
-  hungrySound: {fileID: 8300000, guid: 24c33b0ad4b0a9444bc0cf225ca6669a, type: 3}
 --- !u!114 &7796470891619751924
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -193,7 +192,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3212bceea4794315bd95e5f8bea6a99e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!82 &2752812388146167135
+--- !u!82 &6946387572317293211
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -203,12 +202,12 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 26e04ec24cba1664bb771bd0fae426bf, type: 3}
-  m_Resource: {fileID: 8300000, guid: 26e04ec24cba1664bb771bd0fae426bf, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 24c33b0ad4b0a9444bc0cf225ca6669a, type: 3}
+  m_Resource: {fileID: 8300000, guid: 24c33b0ad4b0a9444bc0cf225ca6669a, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 1
+  Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -290,7 +289,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!82 &6946387572317293211
+--- !u!82 &2752812388146167135
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -300,12 +299,12 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 24c33b0ad4b0a9444bc0cf225ca6669a, type: 3}
-  m_Resource: {fileID: 8300000, guid: 24c33b0ad4b0a9444bc0cf225ca6669a, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 26e04ec24cba1664bb771bd0fae426bf, type: 3}
+  m_Resource: {fileID: 8300000, guid: 26e04ec24cba1664bb771bd0fae426bf, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
