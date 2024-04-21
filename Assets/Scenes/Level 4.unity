@@ -351,7 +351,7 @@ GameObject:
   - component: {fileID: 704571376}
   - component: {fileID: 704571375}
   - component: {fileID: 704571374}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Cracks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -931,7 +931,7 @@ GameObject:
   - component: {fileID: 854961054}
   - component: {fileID: 854961053}
   - component: {fileID: 854961052}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
