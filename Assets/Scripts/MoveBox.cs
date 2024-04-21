@@ -10,11 +10,11 @@ public class MoveBox : MonoBehaviour
 {
     public float PushingForce = .25f;
     public Vector2 LastMovedDirection;
-    private float MaxDistance = 1.5f;
+    private float MaxDistance = 1.2f;
     public List<Movable> movables;
     private bool _pulling;
     private Movable _pullTarget;
-    public float MinimumPullingDistance = 1.5f;
+    private float MinimumPullingDistance = .9f;
     public float PullingSpeed = 0.2f;
 
     private void Start()
