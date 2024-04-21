@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class Bonfire : MonoBehaviour
 {
-    private static int currentLevel = 0;
+    public static int currentLevel = 1;
     private bool hasBeenLit = false;
     [SerializeField] private GameObject fire;
     [SerializeField] private AudioSource audioSource;
