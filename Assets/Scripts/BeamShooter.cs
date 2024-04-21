@@ -56,7 +56,7 @@ public class Beam
             reactor.End();
         }
 
-        
+
         OldReactors = Reactors;
         Reactors = new HashSet<IBeamReactor>();
     }
@@ -83,10 +83,10 @@ public class Beam
         {
             Reactors.Add(reactor);
         }
-        
+
         if (raycast.collider.CompareTag("Glass") && !wentThroughGlass)
         {
-            CalculatePoints(point + direction * 1.5f, point, direction, true);
+            CalculatePoints(point + direction * 2f, point, direction, true);
         }
 
         if (wentThroughGlass && raycast.transform.TryGetComponent<Bonfire>(out var bonfire))
