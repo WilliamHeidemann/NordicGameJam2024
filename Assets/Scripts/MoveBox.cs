@@ -10,7 +10,7 @@ public class MoveBox : MonoBehaviour
 {
     public float PushingForce = .25f;
     public Vector2 LastMovedDirection;
-    private float MaxDistance = 2f;
+    private float MaxDistance = 1.5f;
     public List<Movable> movables;
     private bool _pulling;
     private Movable _pullTarget;
@@ -31,6 +31,8 @@ public class MoveBox : MonoBehaviour
             if (_pullTarget != null)
             {
                 _pulling = true;
+                // Remove E
+                Prompt.Instance.HideE();
             }
         }
         else
@@ -48,6 +50,12 @@ public class MoveBox : MonoBehaviour
 
             if (distance < MinimumPullingDistance) return;
             _pullTarget.transform.position = Vector2.MoveTowards(_pullTarget.transform.position, transform.position, PullingSpeed);
+        }
+        else
+        {
+            var closest = GetClosestMovable();
+            if (closest == null) Prompt.Instance.HideE();
+            else Prompt.Instance.ShowE(closest.transform.position + Vector3.up);
         }
     }
 
