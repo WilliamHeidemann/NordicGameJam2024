@@ -31,12 +31,13 @@ public class MoveBox : MonoBehaviour
             if (_pullTarget != null)
             {
                 _pulling = true;
-                // Remove E
+                _pullTarget.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
                 Prompt.Instance.HideE();
             }
         }
         else
         {
+            _pullTarget.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
             _pullTarget = null;
             _pulling = false;
         }
@@ -69,11 +70,4 @@ public class MoveBox : MonoBehaviour
             return closest;
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("Pushable"))
-        {
-            collision.gameObject.GetComponent<Rigidbody2D>().AddForce(PushingForce * LastMovedDirection);
-        }
-    }
 }
