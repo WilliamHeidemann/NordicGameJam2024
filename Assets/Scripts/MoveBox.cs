@@ -14,7 +14,7 @@ public class MoveBox : MonoBehaviour
     public List<Movable> movables;
     private bool _pulling;
     private Movable _pullTarget;
-    private float MinimumPullingDistance = .9f;
+    private float MinimumPullingDistance = 1f;
     public float PullingSpeed = 0.2f;
 
     private void Start()
