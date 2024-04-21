@@ -76,7 +76,7 @@ public class Beam
         {
             Reactors.Add(reactor);
         }
-        
+
         if (raycast.collider.CompareTag("Mirror"))
         {
             var angledDirection = Vector2.Reflect(direction, raycast.transform.up);
@@ -87,6 +87,21 @@ public class Beam
         if (raycast.collider.CompareTag("Glass") && !wentThroughGlass)
         {
             CalculatePoints(point + direction * 2f, point, direction, true);
+        }
+
+        if (raycast.collider.CompareTag("Player Mirror"))
+        {
+            if (!wentThroughGlass)
+            {
+                var angledDirection = Vector2.Reflect(direction, raycast.transform.up);
+                CalculatePoints(point + angledDirection, point, angledDirection, wentThroughGlass);
+                return;
+            }
+            else
+            {
+                CalculatePoints(point + direction * 1f, point, direction, true);
+            }
+
         }
 
         if (wentThroughGlass && raycast.transform.TryGetComponent<Bonfire>(out var bonfire))

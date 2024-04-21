@@ -8,6 +8,7 @@ TagManager:
   - Glass
   - Bonfire
   - Pushable
+  - Player Mirror
   layers:
   - Default
   - TransparentFX
