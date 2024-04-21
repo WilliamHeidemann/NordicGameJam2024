@@ -11,7 +11,7 @@ PrefabInstance:
     - target: {fileID: 5451620979923035, guid: 40c8f14bc1f2abe4282f788fa82be02f, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 1976137096773804831, guid: 634940f17b3bdcc4295f428bd8505f81, type: 3}
+      objectReference: {fileID: 6549000087923009376, guid: 0e946a29eab08204fae3dcf19bcff5e3, type: 3}
     - target: {fileID: 4659388197932755466, guid: 40c8f14bc1f2abe4282f788fa82be02f, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
       value: 1
@@ -76,6 +76,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8613554242224311162, guid: 40c8f14bc1f2abe4282f788fa82be02f, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2639487186528789056}
+    - targetCorrespondingSourceObject: {fileID: 8613554242224311162, guid: 40c8f14bc1f2abe4282f788fa82be02f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6103314740498722033}
   m_SourcePrefab: {fileID: 100100000, guid: 40c8f14bc1f2abe4282f788fa82be02f, type: 3}
 --- !u!4 &4713755481289611717 stripped
 Transform:
@@ -125,7 +128,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.28, y: 0.85}
+    oldSize: {x: 1.28, y: 0.8475}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -195,6 +198,24 @@ PolygonCollider2D:
       - {x: 0.3046875, y: -0.32617188}
       - {x: 0.31445312, y: -0.32226562}
   m_UseDelaunayMesh: 0
+--- !u!114 &6103314740498722033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7132688171129520129}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 1, g: 0.85567, b: 0, a: 1}
+  outlineWidth: 10
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!1001 &2748122712837391878
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -206,6 +227,10 @@ PrefabInstance:
     - target: {fileID: 450079204117069419, guid: 28efbb205f35f8c40a9a917a27466cf8, type: 3}
       propertyPath: m_Color.a
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 450079204117069419, guid: 28efbb205f35f8c40a9a917a27466cf8, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 1772339445085468163, guid: 28efbb205f35f8c40a9a917a27466cf8, type: 3}
       propertyPath: m_Name
