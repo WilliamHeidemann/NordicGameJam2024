@@ -2147,7 +2147,7 @@ Transform:
   m_GameObject: {fileID: 1449863548}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: 0, y: 0.4, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2164,6 +2164,18 @@ PrefabInstance:
     - target: {fileID: 73557994509418653, guid: 73a584c8eefddd1418b5f02948d5c08d, type: 3}
       propertyPath: m_Name
       value: Caveman
+      objectReference: {fileID: 0}
+    - target: {fileID: 8342973318652926053, guid: 73a584c8eefddd1418b5f02948d5c08d, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8342973318652926053, guid: 73a584c8eefddd1418b5f02948d5c08d, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8342973318652926053, guid: 73a584c8eefddd1418b5f02948d5c08d, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.2
       objectReference: {fileID: 0}
     - target: {fileID: 8342973318652926053, guid: 73a584c8eefddd1418b5f02948d5c08d, type: 3}
       propertyPath: m_LocalPosition.x
