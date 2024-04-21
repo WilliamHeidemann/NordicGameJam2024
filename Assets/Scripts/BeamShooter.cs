@@ -72,16 +72,16 @@ public class Beam
 
         if (raycast.collider is null) return;
 
+        if (raycast.collider.TryGetComponent<IBeamReactor>(out var reactor))
+        {
+            Reactors.Add(reactor);
+        }
+        
         if (raycast.collider.CompareTag("Mirror"))
         {
             var angledDirection = Vector2.Reflect(direction, raycast.transform.up);
             CalculatePoints(point + angledDirection, point, angledDirection, wentThroughGlass);
             return;
-        }
-
-        if (raycast.collider.TryGetComponent<IBeamReactor>(out var reactor))
-        {
-            Reactors.Add(reactor);
         }
 
         if (raycast.collider.CompareTag("Glass") && !wentThroughGlass)
