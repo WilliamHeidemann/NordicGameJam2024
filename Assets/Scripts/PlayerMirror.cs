@@ -10,7 +10,6 @@ public class PlayerMirror : MonoBehaviour, IBeamReactor
 
     public void React()
     {
-        print("Mirror sound!");
         source.PlayOneShot(clip);
     }
     
